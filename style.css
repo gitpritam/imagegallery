@@ -1,0 +1,203 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  fill: #555;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container {
+  width: 750px;
+  height: 600px;
+  background-color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  border-right: solid 2px #333;
+  width: 150px;
+  height: 100%;
+  margin-right: auto;
+}
+
+.container__slider .slider__wrapper {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container__slider .slider__wrapper .slider {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.container__slider .slider__wrapper .slider img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container__slider .slider__wrapper .slider:hover {
+  border: 2px solid #eee;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container__slider .slider__wrapper .slider:hover img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container__slider .prevbtn,
+.container__slider .nextbtn {
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__slider .btn {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.container__slider .prevbtn:hover {
+  -webkit-box-shadow: 0 15px 15px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 15px 15px rgba(255, 255, 255, 0.3);
+}
+
+.container__slider .nextbtn:hover {
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.3);
+}
+
+.container__slider .btn:hover [class^="icon-"],
+.container__slider .btn:hover [class*=" icon-"] {
+  fill: #eee;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container__preview {
+  max-height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__preview img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.active {
+  border: 2px solid #eee !important;
+}
+
+.active img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.fade-in {
+  -webkit-animation: fade-in 0.2s ease-in forwards;
+          animation: fade-in 0.2s ease-in forwards;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
